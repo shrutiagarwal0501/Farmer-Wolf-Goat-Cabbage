@@ -1,0 +1,2 @@
+# Farmer-Goat-Cabbage-Wolf
+A farmer-Goat-Cabbage-Wolf wants to cross the river using boat, but farmer can take only one item at a time with him,keeping all the item safe from each other as in the absence of farmer goat will cabbage and wolf will eat goat, resulting decline of a game/task.
