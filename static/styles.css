@@ -1,0 +1,72 @@
+body {
+font-family: Arial, sans-serif;
+text-align: center;
+margin: 0;
+padding: 0;
+background: #c8e6c9;
+}
+
+
+.content h1 {
+margin: 10px;
+color: #222;
+}
+
+
+.game-container {
+position: relative;
+display: inline-block;
+width: 100%;
+max-width: 1000px;
+}
+
+
+.background {
+width: 1000px;
+height: 500px;
+border: 2px solid #333;
+}
+
+
+.bank-overlay {
+position: absolute;
+bottom: 20px;
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+}
+
+
+.bank-overlay.left {
+left: 4%;
+}
+
+
+.bank-overlay.right {
+right: 0%;
+}
+
+
+.character {
+width: 70px;
+padding-bottom: 20px;
+transition: transform 0.6s ease-in-out;
+}
+
+
+button.move {
+margin: 10px;
+padding: 10px 15px;
+font-size: 16px;
+cursor: pointer;
+border-radius: 8px;
+border: none;
+background-color: #4caf50;
+color: white;
+transition: background 0.3s;
+}
+
+
+button.move:hover {
+background-color: #388e3c;
+}

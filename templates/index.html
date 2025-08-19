@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Farmer-Cabbage-Goat-Wolf Puzzle Game</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<main>
+<div class="content">
+<h1>Farmer-Cabbage-Goat-Wolf Puzzle Game</h1>
+
+
+<div class="game-container">
+<img src="{{ url_for('static', filename='river_bg.png') }}" alt="River Scene" class="background">
+
+
+<!-- Left bank overlay -->
+<div class="bank-overlay left">
+{% if state.f == 'left' %}<img src="{{ url_for('static', filename='farmer.png') }}" class="character">{% endif %}
+{% if state.g == 'left' %}<img src="{{ url_for('static', filename='goat.png') }}" class="character">{% endif %}
+{% if state.c == 'left' %}<img src="{{ url_for('static', filename='cabbage.png') }}" class="character">{% endif %}
+{% if state.w == 'left' %}<img src="{{ url_for('static', filename='wolf.png') }}" class="character">{% endif %}
+</div>
+
+
+<!-- Right bank overlay -->
+<div class="bank-overlay right">
+{% if state.f == 'right' %}<img src="{{ url_for('static', filename='farmer.png') }}" class="character">{% endif %}
+{% if state.g == 'right' %}<img src="{{ url_for('static', filename='goat.png') }}" class="character">{% endif %}
+{% if state.c == 'right' %}<img src="{{ url_for('static', filename='cabbage.png') }}" class="character">{% endif %}
+{% if state.w == 'right' %}<img src="{{ url_for('static', filename='wolf.png') }}" class="character">{% endif %}
+</div>
+</div>
+
+
+<form action="{{ url_for('move_item') }}" method="POST" class="controls">
+<h3>Choose to move:</h3>
+<button class="move" type="submit" name="item" value="c">Move Cabbage</button>
+<button class="move" type="submit" name="item" value="g">Move Goat</button>
+<button class="move" type="submit" name="item" value="w">Move Wolf</button>
+<button class="move" type="submit" name="item" value="n">Farmer Alone</button>
+</form>
+</div>
+</main>
+</body>
+</html>

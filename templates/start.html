@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Farmer-Cabbage-Goat-Wolf Puzzle Game</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<main>
+<div class="content">
+<h1>Farmer-Cabbage-Goat-Wolf Puzzle Game</h1>
+<h2>
+Aim: Move all the items from the left side of the river to the right side using a boat,
+which can carry only two (farmer + one item) at a time.<br>
+Remember: Without the farmer, Wolf can eat Goat, and Goat can eat Cabbage!
+</h2>
+</div>
+
+
+<p>
+Click on <b>Start</b> if you are ready!!<br>
+<b><u>All the best!!</u></b>
+</p>
+<form action="{{ url_for('index') }}">
+<button type="submit" class="Start">Start</button>
+</form>
+</div>
+</main>
+</body>
+</html>
